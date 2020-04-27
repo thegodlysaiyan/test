@@ -1,0 +1,133 @@
+/* stylelint-disable selector-max-compound-selectors */
+:local {
+  .container {
+    border: 1px solid #dedfe0;
+    height: inherit;
+    width: inherit;
+  }
+
+  // Terra Scroll uses -ms-overflow-style set to -ms-autohiding-scrollbar which causes TreeView
+  // actions to be hidden under the scrollbar when it is visible so that you can't click the
+  // action.  Overriding it so that the scrollbar is always visible when the container is scrollable
+  .container div div {
+    -ms-overflow-style: auto !important;
+  }
+
+  .header {
+    background-color: #dedfe0;
+    height: 36px;
+  }
+
+  .headerFitStart {
+    margin-left: 10px;
+  }
+
+  .headerText {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .rowContainer {
+    border-bottom: 1px solid #dedfe0;
+    height: 36px;
+    width: 100%;
+  }
+
+  .rowSelected {
+    background-color: #b3ddf7;
+    border-bottom: 1px solid;
+    border-color: #0092e0 !important;
+    color: #000;
+    height: 36px;
+    width: 100%;
+  }
+
+  .rowSelectedHover {
+    background-color: #e2f2fc;
+    border-bottom: 1px solid;
+    border-color: #0092e0 !important;
+    color: #000;
+    cursor: pointer;
+    height: 36px;
+    width: 100%;
+  }
+
+  .rowUnselectedHover {
+    background-color: #e2f2fc;
+    border-bottom: 1px solid;
+    border-color: #dedfe0;
+    color: #000;
+    cursor: pointer;
+    height: 36px;
+    width: 100%;
+  }
+
+  .rowNotSelectableHover {
+    height: 36px;
+    width: 100%;
+  }
+
+  .firstVisibleRow {
+    border-top: 1px solid #dedfe0;
+  }
+
+  .rowAboveSelectedRow {
+    border-bottom: 1px solid #0092e0 !important;
+  }
+
+  .rowCheckboxSection {
+    margin-right: 20px;
+  }
+
+  .rowIndicatorsSection {
+    margin-right: 10px;
+  }
+
+  .rowTextSection {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    user-select: none;
+    white-space: nowrap;
+    width: 1px; // IE requires a width constraint for ellipsis to work. This doesn't cut off text to 1px.
+  }
+
+  .rowActionsSection {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .selectedRowActionsSection {
+    display: block;
+  }
+
+  .unselectedRowActionsSection {
+    display: none;
+  }
+
+  .rowSelectedHover .unselectedRowActionsSection,
+  .rowUnselectedHover .unselectedRowActionsSection,
+  .rowNotSelectableHover .unselectedRowActionsSection {
+    display: block;
+  }
+
+  .rowInlineBlockDiv {
+    display: inline-block;
+  }
+
+  .folderChevron {
+    cursor: pointer;
+    margin-right: 10px;
+    vertical-align: baseline;
+  }
+
+  .folderClosed {
+    display: none;
+  }
+
+  .folderOpen {
+    display: block;
+  }
+
+}
+/* stylelint-enable */

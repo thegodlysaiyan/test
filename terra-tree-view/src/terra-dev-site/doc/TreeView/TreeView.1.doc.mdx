@@ -1,0 +1,51 @@
+import { Badge } from 'terra-dropdown-button/package.json?dev-site-package';
+
+import SingleSelectTreeViewPropsTable from 'terra-tree-view/src/SingleSelectTreeView?dev-site-props-table'; 
+import TreeViewPropsTable from 'terra-tree-view/src/TreeView?dev-site-props-table'; 
+import TreeViewBasePropsTable from 'terra-tree-view/src/TreeViewBase?dev-site-props-table'; 
+import TreeViewFolderPropsTable from 'terra-tree-view/src/TreeViewFolder?dev-site-props-table'; 
+import TreeViewItemPropsTable from 'terra-tree-view/src/TreeViewItem?dev-site-props-table'; 
+import TreeViewRowPropsTable from 'terra-tree-view/src/TreeViewRow?dev-site-props-table';
+
+import ActionsSection from '../example/ActionsSection?dev-site-example'; 
+import ApplicationControlledSelections from '../example/ApplicationControlledSelections?dev-site-example'; 
+import BasicControlledSelections from '../example/BasicControlledSelections?dev-site-example'; 
+import DefaultSelectionModel from '../example/DefaultSelectionModel?dev-site-example'; 
+import FullFeatured from '../example/FullFeatured?dev-site-example'; 
+import IndicatorSection from '../example/IndicatorSection?dev-site-example'; 
+import NoSelection from '../example/NoSelection?dev-site-example'; 
+import SingleRootFolderOpen from '../example/SingleRootFolderOpen?dev-site-example'; 
+import SingleSelect from '../example/SingleSelect?dev-site-example'; 
+import VolumeTest from '../example/VolumeTest?dev-site-example';
+
+<Badge />
+
+# Terra Tree view
+
+The TreeView component provides a way to render data in a hierarchical tree structure. Generally, the need for the Tree View Component is to represent a folder structure. 
+The structure will consist of two types of items: folders and leaf items. A leaf item represents an individual file or document. A folder is a structural item that can be used for grouping of leaf items and/or other folders. A folder may be empty, such that there are no leaf items or other folders contained within it. A folder may contain other folders (sub-folders), providing for a hierarchical structure.
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-tree-view`
+
+## Usage
+
+In the usage example below, the TreeView component is configured with the following features;
+
+1. The <TreeView> component is used so that the uncontrolled multi-selection model is in effect. The TreeView component will manage the selections within the tree.
+2. The title "Test Tree" is displayed in the component header.
+3. Selection is enabled with the 'uncontrolled' multi-selection model by setting the selectionEnabled prop. When the component is initially rendered, the following folders/items are marked as selected due to the isInitiallySelected props assigned.
+   a. "Item 1"
+   b. "Folder 1", this causes all of its descendants to be marked as selected as well when the component is initially rendered so that it adheres to the rules of the default multi-selection model.
+   c. "Folder 3 / Item 1" and "Folder 3 / Item 2", this causes "Folder 3" to be marked as selected as well when the component is initially rendered so that it adheres to the rules of the default multi-selection model.
+4. the application is informed when the following occurs via the callback props provided.
+   a. onExpand: when a folder is expanded
+   b. onCollapse: when a folder is collapsed
+   c. onSelect: when a folder or leaf item is selected
+   d. onUnselect: when a folder or leaf item is unselected
+   d. onSelectAll: when the user checks the "select all" checkbox in the component's header
+   f. onUnselectAll: when the user unchecks the "select all" checkbox in the component's header
+
+   
